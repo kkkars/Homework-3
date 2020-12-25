@@ -6,4 +6,22 @@
     <RootNamespace>Task_2._1</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Inventory.txt" />
+    <None Remove="Products.txt" />
+    <None Remove="Tags.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Inventory.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Products.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tags.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

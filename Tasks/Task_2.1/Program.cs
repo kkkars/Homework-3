@@ -57,8 +57,6 @@ namespace Task_2._1
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                Console.ReadKey();
-
                 Environment.Exit(-1);
             }
         }
@@ -77,8 +75,6 @@ namespace Task_2._1
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                Console.ReadKey();
-
                 Environment.Exit(-1);
             }
         }
