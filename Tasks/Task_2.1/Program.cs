@@ -30,7 +30,7 @@ namespace Task_2._1
                 var productLines = File.ReadAllLines("Products.txt");
                 products.AddRange(productLines.ToList().Skip(1).Select(productString =>
                 {
-                    string[] productValues = productString.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] productValues = productString.Split(new char[] { ';' });
 
                     Product product = new Product(productValues[0], productValues[1], productValues[2], Convert.ToDecimal(productValues[3]));
                     product.Tags = tags.Where(tag => tag.ProductId == productValues[0]).ToList();
@@ -50,7 +50,7 @@ namespace Task_2._1
                 var tagLines = File.ReadAllLines("Tags.txt");
                 tags.AddRange(tagLines.ToList().Skip(1).Select(tagString =>
                 {
-                    string[] tagValues = tagString.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] tagValues = tagString.Split(new char[] { ';' });
                     return new Tag(tagValues[0], tagValues[1]);
                 }).ToList());
             }
@@ -68,7 +68,7 @@ namespace Task_2._1
 
                 inventories.AddRange(inventoryLines.ToList().Skip(1).Select(inventoryString =>
                 {
-                    string[] inventoryValues = inventoryString.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] inventoryValues = inventoryString.Split(new char[] { ';' });
                     return new Inventory(inventoryValues[0], inventoryValues[1], Convert.ToInt32(inventoryValues[2]));
                 }).ToList());
             }
